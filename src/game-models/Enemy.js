@@ -3,7 +3,12 @@
 class Enemy {
   constructor() {
     this.generateSkin();
-    this.position = 2;
+    this.position = this.generatePosition();
+  }
+
+  generatePosition() {
+    const rand = 15 - 0.5 + Math.random() * (29 - 15 + 1);
+    return Math.round(rand);
   }
 
   generateSkin() {
